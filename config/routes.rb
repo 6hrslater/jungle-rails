@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'authentication/register'
-  get 'authentication/signin'
+  get 'authentication/new'
+  post 'authentication/create'
   get 'about/index'
   root to: 'products#index'
 
