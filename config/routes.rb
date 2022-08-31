@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'authentication/register'
+  get 'authentication/signin'
   get 'about/index'
   root to: 'products#index'
 
@@ -15,7 +17,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'dashboard#show'
-    resources :products, except: [:edit, :update, :show]
+    resources :products, except: [:edit, :update, :show] 
+    resources :categories, except: [:edit, :update, :show, :delete]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

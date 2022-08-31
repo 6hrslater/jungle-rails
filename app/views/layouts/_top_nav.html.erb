@@ -64,6 +64,14 @@
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
+
+        <li>
+        <%= link_to "Register", [:authentication, :register], class: "nav-link"%>
+        </li>
+
+        <li>
+        <%= link_to "Sign In", [:authentication, :signin], class: "nav-link"%>
+        </li>
       </ul>
     </div>
   </div>
