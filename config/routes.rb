@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :sessions, only: [:create, :destroy]
+  get 'signin', to: 'sessions#new'
+  get 'logout', to: 'sessions#destroy'
+  
   get 'authentication/new'
   post 'authentication/create'
   get 'about/index'
