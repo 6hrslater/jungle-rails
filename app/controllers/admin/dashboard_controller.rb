@@ -1,13 +1,7 @@
 class Admin::DashboardController < ApplicationController
-  before_action :authenticate
+  http_basic_authenticate_with name: ENV["HTTP_USERNAME"], password: ENV["HTTP_PASSWORD"]
   def show
-    @category = Category.count(:all)
-    @products = Product.count(:all)
-  end
-  protected
-    def authenticate
-      authenticate_or_request_with_http_basic do |username, password|
-      username == ENV['USERNAME'] && password == ENV['PASSWORD']
-    end
+    @products = Product.all
+    @categories = Category.all
   end
 end
