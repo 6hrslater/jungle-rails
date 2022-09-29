@@ -1,3 +1,10 @@
+## Completed project repo
+Due to issues with pushing file to this repo, the completed project has been moved to a newer repo. 
+
+Completed repo: https://github.com/6hrslater/jungle-rails-remake
+
+Reason for moving repos: I wasn't able to pull / push files and did not notice until a bunch of commits were missed so I had to manually add files to the repo which has caused some issues with files being in the wrong directories etc. A new repo was made for the completed project to avoid the complexity and this repo can be for references to the completed one.
+
 # Jungle
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
